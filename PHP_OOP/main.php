@@ -1,0 +1,63 @@
+<?php
+    echo "Nama : Nadia Dita Salsabila";
+    echo "<br>";
+    echo "NPM : 21081010181";
+    echo "<br>";
+    echo "Kelas :Pemrograman Web A081";
+    echo "<br>";
+
+    require_once('CDMusic.php');
+    $CDMusic = new CDMusic ("Lagu Indonesia", 15000, 5);
+    $CDMusic->setPrice(15000);
+    $CDMusic->setDiscount(5);
+    $CDMusic->setArtist("Denny Caknan");
+    $CDMusic->setGenre("Genre Dangdut");
+
+    echo "================================";
+    echo "<br>";
+    echo "CD Music ";
+    echo "<br>";
+    echo "Nama : ".$CDMusic->getName();
+    echo "<br>";
+    echo "Harga Asli : Rp.15000";
+    echo "<br>";
+    echo "Harga : Rp.".$CDMusic->getPrice();
+    echo "<br>";
+    echo "Penyanyi : ".$CDMusic->getArtist();
+    echo "<br>";
+    echo "Genre : ".$CDMusic->getGenre();
+    echo "<br>";
+    echo "Diskon : ".$CDMusic->getDiscount()."%";
+    echo "<br>";
+    echo "Harga Setelah Diskon : Rp.".(100 - $CDMusic->getDiscount())/100 * $CDMusic->getPrice();
+    echo "<br>";
+    echo "================================";
+    echo "<br>";
+
+    require_once('CDRack.php');
+    $CDRack = new CDRack ("Lion Star", 100000, 0);
+    $CDRack->setPrice(100000);
+    $CDRack->setDiscount(0);
+    $CDRack->setCapacity("50");
+    $CDRack->setModel("Susun");
+
+    echo "================================";
+    echo "<br>";
+    echo "CD Rack ";
+    echo "<br>";
+    echo "Nama : ".$CDRack->getName();
+    echo "<br>";
+    echo "Harga Asli : Rp.100000";
+    echo "<br>";
+    echo "Harga : Rp.".$CDRack->getPrice();
+    echo "<br>";
+    echo "Model : ".$CDRack->getModel();
+    echo "<br>";
+    echo "Kapasitas Penyimpanan : ".$CDRack->getCapacity()." CD";
+    echo "<br>";
+    echo "Diskon : ".$CDRack->getDiscount()."%";
+    echo "<br>";
+    echo "Harga Setelah Diskon : Rp.".(100 - $CDRack->getDiscount())/100 * $CDRack->getPrice();
+    echo "<br>";
+    echo "================================";
+    echo "<br>";
